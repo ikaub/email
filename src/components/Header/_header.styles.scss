@@ -1,0 +1,29 @@
+.header {
+  background-color: #fff;
+  box-shadow: .3rem 0 1rem .2rem rgba(0, 0, 0, .2);
+  height: $header-height;
+
+  &__nav {
+    height: 100%;
+    @include flexCenter;
+
+    &-link {
+      height: 100%;
+      width: 18rem;
+      max-width: 32%;
+      @include flexCenter;
+      text-align: center;
+      text-decoration: none;
+      color: $text-primary;
+      transition: .5s all;
+
+      &:hover {
+        @include linkHovered;
+      }
+
+      &__active {
+        @include linkHovered;
+      }
+    }
+  }
+}

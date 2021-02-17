@@ -1,0 +1,57 @@
+.modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: $text-primary;
+  opacity: .85;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  width: 100rem;
+  height: 50rem;
+  background-color: #fff;
+  z-index: 1000;
+  border-radius: .6rem;
+
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  &__close-icon {
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+    @include flexCenter;
+    border: 1px solid $text-primary;
+    border-radius: 1rem;
+  }
+
+  &__body {
+    margin-top: 12rem;
+    padding: 0 3rem;
+    overflow-y: scroll;
+    max-height: calc(100% - 15rem);
+  }
+}

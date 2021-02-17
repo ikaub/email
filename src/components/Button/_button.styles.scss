@@ -1,0 +1,11 @@
+.btn {
+  @include flexCenter;
+  width: 15rem;
+  height: 5rem;
+  background-color: $blue-primary;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: 0;
+}

@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
 
-function App() {
+import { CreateEmail } from './pages/CreateEmail/CreateEmail';
+import { Email } from './pages/Email/Email';
+import { Header } from './components/Header/Header';
+
+import './App.scss';
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header/>
+      <Switch>
+        <Route path="/new">
+          <CreateEmail/>
+        </Route>
+        <Route path={[ '/inbox', '/outbox' ]}>
+          <Email/>
+        </Route>
+        <Route path="*">
+          <Redirect to="/new"/>
+        </Route>
+      </Switch>
+    </Router>
   );
-}
-
-export default App;
+};

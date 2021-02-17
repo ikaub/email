@@ -1,0 +1,45 @@
+.inbox-page {
+  height: $page-height;
+
+  table {
+    margin: 10rem auto;
+    border-collapse: collapse;
+    width: 60%;
+
+    caption {
+      font-weight: bold;
+      font-size: 2.4rem;
+    }
+
+    tr, td {
+      width: 30%;
+      min-width: 8.5rem;
+      height: 5rem;
+      padding: .6rem;
+      text-align: center;
+    }
+
+    tr {
+      border: 1px solid black;
+      cursor: pointer;
+
+      .th-display {
+        margin: 1rem auto;
+        background-color: #ffa526;
+        color: #fff;
+        width: 3rem;
+        height: 3rem;
+        @include flexCenter;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__empty {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,14 @@
+.create-mail-page {
+  height: $page-height;
+  @include flexCenter;
+
+  .create-mail__form {
+    height: 80%;
+    max-height: 45rem;
+    width: 30%;
+    min-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

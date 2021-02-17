@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import './styles/variables';
+@import './styles/mixins';
+
+@import './components/Header/header.styles';
+@import './components/Input/input.styles';
+@import './components/Button/button.styles';
+@import './components/Modal/modal.styles';
+@import './components/Message/message.styles';
+
+@import './pages/CreateEmail/create-mail.styles';
+@import 'pages/Email/email.styles';
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  color: $text-primary;
+}
+
+#root {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
